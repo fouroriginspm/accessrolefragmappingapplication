@@ -1,0 +1,14 @@
+<mvc:View controllerName="accmap.controller.appMap"
+    xmlns:core="sap.ui.core"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}" showHeader="false">
+
+        <content>
+        <!-- Adding filter bar -->
+        <core:Fragment fragmentName="accmap.view.SubView.MapList.FilterBar" type="XML"/> 
+        <!-- Adding Table bar -->
+        <core:Fragment fragmentName="accmap.view.SubView.MapList.ProductTable" type="XML"/> 
+        </content>
+    </Page>
+</mvc:View>

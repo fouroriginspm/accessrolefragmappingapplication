@@ -1,0 +1,15 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<SelectDialog
+		id="selectDialogRole"
+		title="Select ROLE ID"
+		items="{appModel>/ritems}"
+		search=".onValueHelpSearchforRoleID"
+		confirm=".onRoleIDValueHelpRequest"
+        multiSelect="true"
+		cancel=".onValueHelpCloseforRoleID">
+		<StandardListItem
+			
+			title="{appModel>ROLE_ID}"
+			description="{appModel>ROLE_CODE}" />
+	</SelectDialog>
+</core:FragmentDefinition>

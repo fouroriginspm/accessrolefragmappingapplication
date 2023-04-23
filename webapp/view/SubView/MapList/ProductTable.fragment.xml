@@ -1,0 +1,106 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:u="sap.ui.unified">
+	<Table id="idProductsTable" width="auto" mode="None" items="{appModel>/items}" sticky="HeaderToolbar,ColumnHeaders" noDataText="{i18n>noData}" growing="true" growingScrollToLoad="true" growingThreshold="20" updateFinished="onUpdateFinished">
+	
+        	<headerToolbar>
+            <Toolbar>
+                <Title text="Access Mapping" level="H1"/>
+                <ToolbarSpacer />
+                
+                <u:FileUploader
+                    id="fileUploader"
+                    name="myFileUpload"
+                    change="handleUploadPress"
+                    typeMissmatch="handleTypeMissmatch"
+                    style="Emphasized"
+                    fileType="xls,xlsx"
+                    buttonOnly="true"
+                    buttonText="Upload"
+                    placeholder="Choose a file for Upload..."
+                    icon="sap-icon://upload"
+                />
+                <Button icon="sap-icon://download" text="Download" tooltip="download" type="Emphasized" press="onDownload" />
+                <Button icon="sap-icon://sort" text="Sort" tooltip="Sort" type="Emphasized" press="onSort"/>
+            </Toolbar>
+        </headerToolbar>
+        	<columns>
+			<!-- <Column
+				minScreenWidth="Desktop"
+				demandPopin="true">
+				<Text text="SEQ_ID" />
+			</Column> -->
+			<Column
+				minScreenWidth="Desktop"
+				demandPopin="true">
+				<Text text="APPLICATION ID" />
+			</Column>
+			<Column
+				minScreenWidth="Desktop"
+				demandPopin="true">
+				<Text text="ROLE ID" />
+			</Column>
+            <Column
+				minScreenWidth="Desktop"
+				demandPopin="true">
+				<Text text="FRAGMENT ID" />
+			</Column>
+            <Column
+				minScreenWidth="Desktop"
+				demandPopin="true">
+				<Text text="PROPERTY" />
+			</Column>
+            <Column
+				minScreenWidth="Desktop"
+				demandPopin="true">
+				<Text text="REQUIRED" />
+			</Column>
+            <Column
+				minScreenWidth="Desktop"
+				demandPopin="true">
+				<Text text="EDITABLE" />
+			</Column>
+            <Column
+				minScreenWidth="Desktop"
+				demandPopin="true">
+				<Text text="PICKLIST" />
+			</Column>
+            <Column
+				minScreenWidth="Desktop"
+				demandPopin="true">
+				<Text text="VISIBLE" />
+			</Column>
+            <Column
+				minScreenWidth="Desktop"
+				demandPopin="true">
+				<Text text="ACTION" />
+			</Column>
+		</columns>
+        <items>
+			<ColumnListItem vAlign="Middle">
+				<cells>
+                
+					<!-- <Text text="{appModel>SEQ_ID}" /> -->
+					<Text text="{appModel>APPLNSEQID}"/>
+					<Text text="{appModel>ROLE_ID}" />
+					<Text text="{appModel>FRAGMENT_ID}" />
+					<Text text="{appModel>PROPERTY}" />
+					<CheckBox editable="{=${appModel>/bEdit} ? true : false}" selected="{=${appModel>REQUIRED} === 'true' ? true : false}" />
+					<CheckBox editable="{=${appModel>/bEdit} ? true : false}" selected="{=${appModel>EDITABLE} === 'true' ? true : false}" />
+					<CheckBox editable="{=${appModel>/bEdit} ? true : false}" selected="{=${appModel>PICKLIST} === 'true' ? true : false}" />
+                    <CheckBox editable="{=${appModel>/bEdit} ? true : false}" selected="{=${appModel>VISIBLE} === 'true' ? true : false}" />
+                    
+					<HBox wrap="Wrap" alignItems="End">
+                       
+                        <!-- <core:Icon src="sap-icon://display" tooltip="{Display}" press=".onPressAction($event,'display')" class="sapUiTinyMargin" />  -->
+                        <core:Icon src="sap-icon://edit" visible="{=${appModel>/bEdit} ? false : true}" tooltip="Edit" press="onEditListItem" class="sapUiTinyMargin" />
+						<core:Icon src="sap-icon://save" visible="{=${appModel>/bEdit} ? true : false}" tooltip="Save" press="onSaveListItem" class="sapUiTinyMargin" />
+						<core:Icon src="sap-icon://reset" visible="{=${appModel>/bEdit} ? true : false}" tooltip="Save" press="onResetListItem" class="sapUiTinyMargin" />
+                        <core:Icon src="sap-icon://delete" visible="{=${appModel>/bEdit} ? false : true}" tooltip="Delete" press="onDeleteListItem" class="sapUiTinyMargin" />
+                   
+                   
+                    </HBox>
+                
+				</cells>
+			</ColumnListItem>
+		</items>
+        </Table>
+</core:FragmentDefinition>

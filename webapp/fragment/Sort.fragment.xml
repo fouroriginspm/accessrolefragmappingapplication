@@ -1,0 +1,16 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:layout="sap.ui.layout" xmlns:form="sap.ui.layout.form" 
+xmlns:core="sap.ui.core">
+	
+	<ViewSettingsDialog confirm="handleSortDialogConfirm">
+		
+		<sortItems>
+		
+			<ViewSettingsItem text="APPLICATION ID" key="APPLNSEQID" selected="true"/>
+			<ViewSettingsItem text="ROLE ID" key="ROLE_ID"/>
+			<ViewSettingsItem text="PROPERTY" key="PROPERTY"/>
+			
+		</sortItems>
+
+	</ViewSettingsDialog>
+	
+</core:FragmentDefinition>

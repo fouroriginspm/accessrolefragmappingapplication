@@ -1,0 +1,39 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:filterbar="sap.ui.comp.filterbar">
+	
+    <filterbar:FilterBar persistencyKey="myPersKey" useToolbar="false" showClearOnFB="true" clear="onClear" search="onSearch" reset="onReset">
+        <filterbar:filterGroupItems showHeader="false">
+			<filterbar:FilterGroupItem groupName="GnAPPLNSEQID" name="APPLNSEQID" groupTitle="{i18n>LblFILTERAPPLNSEQID}" label="{i18n>APPLNSEQID}" 
+			labelTooltip="{i18n>APPLNSEQID}" visibleInFilterBar="true">
+                <filterbar:control>
+                	<MultiInput id="InpFilBarAPPLNSEQID" placeholder="Select Application Id" tokens="{oViewModel>/oUserTokens}" valueHelpOnly="true" tokenUpdate="onTokenUpdate($event, 'Agency')"
+								valueHelpRequest="onValueHelpAPPLNSEQID"  suggestionItems="{appModel>/items}">
+								<tokens>
+									<Token key="{oViewModel>APPLNSEQID}" text="{oViewModel>APPLNSEQID}" editable="false"/>
+								</tokens>
+                                   <suggestionItems>
+                            <core:Item text="{appModel>APPLNSEQID}" />
+                        </suggestionItems>
+							</MultiInput>
+                </filterbar:control>
+            </filterbar:FilterGroupItem>
+
+            <filterbar:FilterGroupItem groupName="GnROLE_ID" name="ROLE_ID" groupTitle="{i18n>LblFILTERROLE_ID}" label="{i18n>ROLE_ID}"
+				labelTooltip="{i18n>ROLE_ID}" visibleInFilterBar="true">
+				<filterbar:control>
+					<MultiInput id="InpFilBarROLE_ID" placeholder="Select Role Id" tokens="{oViewModel>/oUserTokens}" valueHelpOnly="true" tokenUpdate="onTokenUpdate($event, 'Agency')"
+						valueHelpRequest="onValueHelpROLE_ID" suggestionItems="{appModel>/items}">
+						<tokens>
+							<Token key="{oViewModel>ROLE_ID}" text="{oViewModel>ROLE_ID}" editable="false"/>
+						</tokens> 
+						 <suggestionItems>
+							<core:Item text="{appModel>ROLE_ID}"/>
+						</suggestionItems> 
+					</MultiInput>
+				</filterbar:control>
+			</filterbar:FilterGroupItem>
+
+        </filterbar:filterGroupItems>
+
+	</filterbar:FilterBar>
+
+</core:FragmentDefinition>

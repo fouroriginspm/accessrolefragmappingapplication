@@ -1,0 +1,28 @@
+<mvc:View
+	controllerName="accmap.controller.EditValue"
+	xmlns:core="sap.ui.core"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="Edit Value" showHeader="false">
+
+        <content>
+        <!-- Adding filter bar -->
+        <core:Fragment fragmentName="accmap.view.SubView.EditValue.EditValueForm" type="XML"/> 
+        <!-- Adding Table bar -->
+        <!-- <core:Fragment fragmentName="accmap.view.SubView.MapList.ProductTable" type="XML"/>  -->
+        </content>
+
+        <footer>
+        <Bar>
+        <contentLeft>
+        <Button text= "Cancel" type="Default" press="onCancel"/>
+        </contentLeft>
+        
+        <contentRight>
+        <Button text= "Save" type="Emphasized" press="onSubmit"/>
+        </contentRight>
+        </Bar>
+        </footer>
+
+    </Page>
+</mvc:View>

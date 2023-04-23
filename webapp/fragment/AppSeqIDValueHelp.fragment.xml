@@ -1,0 +1,15 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<SelectDialog
+		id="selectDialog"
+		title="Select APPLICATION ID"
+		items="{appModel>/fitems}"
+		search=".onValueHelpSearch"
+		confirm="onAppSeqIDValueHelpRequest"
+        multiSelect="true"
+		cancel=".onValueHelpClose">
+		<StandardListItem
+			
+			title="{appModel>APPLNSEQID}"
+			description="{appModel>APP_NAME}" />
+	</SelectDialog>
+</core:FragmentDefinition>

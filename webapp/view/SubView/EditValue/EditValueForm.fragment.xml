@@ -1,0 +1,65 @@
+<c:FragmentDefinition
+	xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+    xmlns:f="sap.ui.layout.form"
+	xmlns:c="sap.ui.core">
+    
+    <VBox class="sapUiSmallMargin">
+        <f:SimpleForm id="AccessMappingEdit"
+            editable="true"
+            layout="ResponsiveGridLayout"
+            title="Edit Details"
+            labelSpanXL="4"
+            labelSpanL="4"
+            labelSpanM="12"
+            labelSpanS="12"
+            adjustLabelSpan="false"
+            emptySpanXL="0"
+            emptySpanL="0"
+            emptySpanM="0"
+            emptySpanS="0"
+            columnsXL="2"
+            columnsL="2"
+            columnsM="1"
+            singleContainerFullSize="false" >
+
+            <f:content>
+                <c:Title text="" />
+                <Label text="Sequence ID" />
+                <Input value="{appModel>SEQ_ID}" />
+                
+                <Label text="Role ID" />
+                <Input value="{appModel>ROLE_ID}" />
+                
+                <Label text="Property" />
+                <Input value="{appModel>PROPERTY}" />
+                
+                <Label text="Editable" />
+                <Input value="{appModel>EDITABLE}" />
+
+                <Label text="Visible" />
+                <Input value="{appModel>VISIBLE}" />
+
+                
+
+                <c:Title text="" />
+                <Label text="Application ID" />
+                <Input value="{appModel>APPLNSEQID}" />
+                
+                <Label text="Fragment ID" />
+                <Input value="{appModel>FRAGMENT_ID}" />
+                
+                <Label text="Required" />
+                <Input value="{appModel>REQUIRED}" />
+                
+                <Label text="Picklist" />
+                <Input value="{appModel>PICKLIST}" />
+
+                
+
+            </f:content>
+
+        </f:SimpleForm>            
+    </VBox>
+
+</c:FragmentDefinition>
