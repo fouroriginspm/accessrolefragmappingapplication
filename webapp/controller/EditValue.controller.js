@@ -1,28 +1,26 @@
 sap.ui.define([
-	"sap/ui/core/mvc/Controller"
+	"./BaseController"
 ], function(
-	Controller
+	BaseController
 ) {
 	"use strict";
 
-	return Controller.extend("accmap.controller.EditValue", {
+	return BaseController.extend("accmap.controller.EditValue", {
         /**
          * @override
          */
         onInit: function() {
+            this.setAccessToken();
             this.oRouter = this.getOwnerComponent().getRouter();
             this.AccessMappingModel = this.getOwnerComponent().getModel("appModel");
             this._fnInitialSetModel();
         
         },
         onAfterRendering: function() {
-            debugger;
-            
         
         },
 
         _fnInitialSetModel: function () {
-            debugger;
             var absolutePath = "https://spusermgmt-wstkn7335q-as.a.run.app";
             var relativePath = "/admin/application-role-frg-mapping/5";
             var eUrl = absolutePath + relativePath;

@@ -2,28 +2,27 @@
 	
     <filterbar:FilterBar persistencyKey="myPersKey" useToolbar="false" showClearOnFB="true" clear="onClear" search="onSearch" reset="onReset">
         <filterbar:filterGroupItems showHeader="false">
-			<filterbar:FilterGroupItem groupName="GnAPPLNSEQID" name="APPLNSEQID" groupTitle="{i18n>LblFILTERAPPLNSEQID}" label="{i18n>APPLNSEQID}" 
+			<filterbar:FilterGroupItem groupName="G1" name="APPLNSEQID" groupTitle="{i18n>LblFILTER}" label="{i18n>APPLNSEQID}" 
 			labelTooltip="{i18n>APPLNSEQID}" visibleInFilterBar="true">
                 <filterbar:control>
-                	<MultiInput id="InpFilBarAPPLNSEQID" placeholder="Select Application Id" tokens="{oViewModel>/oUserTokens}" valueHelpOnly="true" tokenUpdate="onTokenUpdate($event, 'Agency')"
-								valueHelpRequest="onValueHelpAPPLNSEQID"  suggestionItems="{appModel>/items}">
+                	<MultiInput id="valueHelpFilterApplnseqId" placeholder="Select Application Id" tokens="{appModel>/oUserTokens_appSeqID}" valueHelpOnly="true" tokenUpdate="onTokenUpdate($event, 'Agency')"
+								valueHelpRequest="onValueHelpRequestForAppSeqId"  suggestionItems="{appModel>/items}">
 								<tokens>
-									<Token key="{oViewModel>APPLNSEQID}" text="{oViewModel>APPLNSEQID}" editable="false"/>
+									<Token key="{appModel>APPLNSEQID}" text="{appModel>APPLNSEQID}" editable="true"/>
 								</tokens>
-                                   <suggestionItems>
-                            <core:Item text="{appModel>APPLNSEQID}" />
-                        </suggestionItems>
-							</MultiInput>
+                                <suggestionItems>
+                                    <core:Item text="{appModel>APPLNSEQID}" />
+                                </suggestionItems>
+					</MultiInput>
                 </filterbar:control>
             </filterbar:FilterGroupItem>
-
-            <filterbar:FilterGroupItem groupName="GnROLE_ID" name="ROLE_ID" groupTitle="{i18n>LblFILTERROLE_ID}" label="{i18n>ROLE_ID}"
+              <filterbar:FilterGroupItem groupName="G1" name="ROLE_ID" groupTitle="{i18n>LblFILTER}" label="{i18n>ROLE_ID}"
 				labelTooltip="{i18n>ROLE_ID}" visibleInFilterBar="true">
 				<filterbar:control>
-					<MultiInput id="InpFilBarROLE_ID" placeholder="Select Role Id" tokens="{oViewModel>/oUserTokens}" valueHelpOnly="true" tokenUpdate="onTokenUpdate($event, 'Agency')"
-						valueHelpRequest="onValueHelpROLE_ID" suggestionItems="{appModel>/items}">
+					<MultiInput id="valueHelpFilterRoleId" placeholder="Select Role Id" tokens="{appModel>/oUserTokens_roleID}" valueHelpOnly="true" tokenUpdate="onTokenUpdate($event, 'Agency')"
+						valueHelpRequest="onValueHelpRequestForRoleId" suggestionItems="{appModel>/items}">
 						<tokens>
-							<Token key="{oViewModel>ROLE_ID}" text="{oViewModel>ROLE_ID}" editable="false"/>
+							<Token key="{appModel>ROLE_ID}" text="{appModel>ROLE_CODE}" editable="true"/>
 						</tokens> 
 						 <suggestionItems>
 							<core:Item text="{appModel>ROLE_ID}"/>
@@ -32,8 +31,21 @@
 				</filterbar:control>
 			</filterbar:FilterGroupItem>
 
+
+			   <filterbar:FilterGroupItem groupName="G1" name="FRAGMENT_ID" groupTitle="{i18n>LblFILTER}" label="{i18n>FRAGMENT_ID}"
+				labelTooltip="{i18n>FRAGMENT_ID}" visibleInFilterBar="true">
+				<filterbar:control>
+					<MultiInput id="valueHelpFilterFragmentId" placeholder="Select Fragment Id" tokens="{appModel>/oUserTokens_FRAGMENTID}" valueHelpOnly="true" tokenUpdate="onTokenUpdate($event, 'Agency')"
+						valueHelpRequest="onValueHelpRequestForFragmentId" suggestionItems="{appModel>/items}">
+						<tokens>
+							<Token key="{appModel>FRAGMENT_ID}" text="{appModel>FRAGMENT_ID}" editable="true"/>
+						</tokens> 
+						 <suggestionItems>
+							<core:Item text="{appModel>FRAGMENT_ID}"/>
+						</suggestionItems> 
+					</MultiInput>
+				</filterbar:control>
+			</filterbar:FilterGroupItem>
         </filterbar:filterGroupItems>
-
 	</filterbar:FilterBar>
-
 </core:FragmentDefinition>

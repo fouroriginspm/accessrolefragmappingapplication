@@ -1,0 +1,5 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+    <SelectDialog id="appFRAGMENT_ID" title="Select Fragment Id" items="{ path:'appModel>/kitems'}" search=".onValueHelpSearchForFragmentId" confirm=".onValueHelpConfirmForFragmentId" multiSelect="true" cancel=".onValueHelpCloseForFragmentId">
+        <StandardListItem id="_IDGenStandardListItem3" title="{appModel>FRAGMENT_ID}" />
+    </SelectDialog>
+</core:FragmentDefinition>

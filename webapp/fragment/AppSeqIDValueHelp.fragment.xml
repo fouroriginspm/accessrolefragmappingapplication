@@ -1,15 +1,5 @@
 <core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
-	<SelectDialog
-		id="selectDialog"
-		title="Select APPLICATION ID"
-		items="{appModel>/fitems}"
-		search=".onValueHelpSearch"
-		confirm="onAppSeqIDValueHelpRequest"
-        multiSelect="true"
-		cancel=".onValueHelpClose">
-		<StandardListItem
-			
-			title="{appModel>APPLNSEQID}"
-			description="{appModel>APP_NAME}" />
-	</SelectDialog>
+    <SelectDialog id="appSeq_Id" title="Select Application ID" items="{ path:'appModel>/fitems'}" search=".onValueHelpSearchForAppSeqId" confirm=".onValueHelpConfirmForAppSeqId" multiSelect="true" cancel=".onValueHelpCloseForAppSeqId">
+        <StandardListItem id="_IDGenStandardListItem1" title="{appModel>APPLNSEQID}" description="{appModel>APP_NAME}" />
+    </SelectDialog>
 </core:FragmentDefinition>

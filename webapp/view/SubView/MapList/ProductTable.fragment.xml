@@ -5,19 +5,7 @@
             <Toolbar>
                 <Title text="Access Mapping" level="H1"/>
                 <ToolbarSpacer />
-                
-                <u:FileUploader
-                    id="fileUploader"
-                    name="myFileUpload"
-                    change="handleUploadPress"
-                    typeMissmatch="handleTypeMissmatch"
-                    style="Emphasized"
-                    fileType="xls,xlsx"
-                    buttonOnly="true"
-                    buttonText="Upload"
-                    placeholder="Choose a file for Upload..."
-                    icon="sap-icon://upload"
-                />
+				 <u:FileUploader id="fileUploader" sameFilenameAllowed="true" name="myFileUpload" change="handleUploadPress" typeMissmatch="handleTypeMissmatch" style="Emphasized" fileType="xls,xlsx" buttonOnly="true" icon="sap-icon://upload" buttonText="Upload" />
                 <Button icon="sap-icon://download" text="Download" tooltip="download" type="Emphasized" press="onDownload" />
                 <Button icon="sap-icon://sort" text="Sort" tooltip="Sort" type="Emphasized" press="onSort"/>
             </Toolbar>
@@ -31,47 +19,47 @@
 			<Column
 				minScreenWidth="Desktop"
 				demandPopin="true">
-				<Text text="APPLICATION ID" />
+				<Text text="Application Id" />
 			</Column>
 			<Column
 				minScreenWidth="Desktop"
 				demandPopin="true">
-				<Text text="ROLE ID" />
+				<Text text="Role Id" />
 			</Column>
             <Column
 				minScreenWidth="Desktop"
 				demandPopin="true">
-				<Text text="FRAGMENT ID" />
+				<Text text="Fragment Id" />
 			</Column>
             <Column
 				minScreenWidth="Desktop"
 				demandPopin="true">
-				<Text text="PROPERTY" />
+				<Text text="Property" />
 			</Column>
             <Column
 				minScreenWidth="Desktop"
 				demandPopin="true">
-				<Text text="REQUIRED" />
+				<Text text="Rrequired" />
 			</Column>
             <Column
 				minScreenWidth="Desktop"
 				demandPopin="true">
-				<Text text="EDITABLE" />
+				<Text text="Editable" />
 			</Column>
             <Column
 				minScreenWidth="Desktop"
 				demandPopin="true">
-				<Text text="PICKLIST" />
+				<Text text="Picklist" />
 			</Column>
             <Column
 				minScreenWidth="Desktop"
 				demandPopin="true">
-				<Text text="VISIBLE" />
+				<Text text="Visiable" />
 			</Column>
             <Column
 				minScreenWidth="Desktop"
 				demandPopin="true">
-				<Text text="ACTION" />
+				<Text text="Action" />
 			</Column>
 		</columns>
         <items>
